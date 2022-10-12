@@ -41,10 +41,15 @@ ja:
       success: "Successfully authenticated from %{kind} account."
     passwords:
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
-      send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
+      send_instructions: "数分でパスワード再設定用メールが届きます"
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password has been changed successfully. You are now signed in."
+      updated: "パスワードを変更しました"
       updated_not_active: "Your password has been changed successfully."
+      forgot_your_password: "パスワードを忘れましたか？"
+      send_me_reset_password_instructions: "パスワードの再設定メールを送信する"
+      new_password: "新しいパスワード"
+      confirm_new_password: "新しいパスワードの確認"
+      change_my_password: "パスワードを変更する"
     registrations:
       destroyed: "またのご利用お待ちしております。"
       signed_up: "Welcome! You have signed up successfully."
