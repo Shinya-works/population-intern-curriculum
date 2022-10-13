@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: "users/registrations"
   }
+  namespace :user do
+    resources :articles
+  end
 end
