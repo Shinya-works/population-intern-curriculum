@@ -3,7 +3,7 @@ class Users::ArticlesController < ApplicationController
 
   # GET /articles or /articles.json
   def index
-    @articles = Article.all
+    @articles = current_user.articles.all
   end
 
   # GET /articles/1 or /articles/1.json
@@ -12,7 +12,7 @@ class Users::ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    @article = Article.new
+    @article = current_user.articles.new
   end
 
   # GET /articles/1/edit
@@ -21,11 +21,10 @@ class Users::ArticlesController < ApplicationController
 
   # POST /articles or /articles.json
   def create
-    @article = Article.new(article_params)
-byebug
+    @article = current_user.articles.new(article_params)
     respond_to do |format|
       if @article.save
-        format.html { redirect_to article_url(@article), notice: "Article was successfully created." }
+        format.html { redirect_to user_article_path(@article), notice: "記事を作成しました" }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new, status: :unprocessable_entity }
