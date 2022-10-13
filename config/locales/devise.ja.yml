@@ -1,0 +1,97 @@
+# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
+
+ja:
+  devise:
+    confirmations:
+      confirmed: "メールアドレス確認に成功しました。"
+      send_instructions: "アカウントの有効化について数分以内にメールでご連絡します。"
+      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
+      title: "アカウント確認のメールを受け取っていませんか？"
+      resend_confirmation_instructions: "アカウント確認メール再送"
+    failure:
+      already_authenticated: "すでにログインしています。"
+      inactive: "Your account is not activated yet."
+      invalid: "Invalid %{authentication_keys} or password."
+      locked: "Your account is locked."
+      last_attempt: "You have one more attempt before your account is locked."
+      not_found_in_database: "Invalid %{authentication_keys} or password."
+      timeout: "Your session expired. Please sign in again to continue."
+      unauthenticated: "You need to sign in or sign up before continuing."
+      unconfirmed: "You have to confirm your email address before continuing."
+    mailer:
+      greeting: "%{email}様"
+      confirmation_instructions:
+        subject: 'アカウント新規作成完了について'
+        message: "以下のリンクをクリックし、メールアドレスの確認手続きを完了させてください。"
+        confirm_my_account: "メールアドレスの確認"
+      reset_password_instructions:
+        subject: "パスワードの再設定について"
+        message1: "パスワード再設定の依頼を受けたため、メールを送信しています。下のリンクからパスワードの再設定ができます。"
+        change_my_password: "パスワード変更"
+        message2: "パスワード再設定の依頼をしていない場合、このメールを無視してください。"
+        message3: "パスワードの再設定は、上のリンクから新しいパスワードを登録するまで完了しません。"
+      unlock_instructions:
+        subject: "Unlock instructions"
+      email_changed:
+        subject: "Email Changed"
+      password_change:
+        subject: "Password Changed"
+    omniauth_callbacks:
+      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
+      success: "Successfully authenticated from %{kind} account."
+    passwords:
+      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "数分でパスワード再設定用メールが届きます"
+      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
+      updated: "パスワードを変更しました"
+      updated_not_active: "Your password has been changed successfully."
+      forgot_your_password: "パスワードを忘れましたか？"
+      send_me_reset_password_instructions: "パスワードの再設定メールを送信する"
+      new_password: "新しいパスワード"
+      confirm_new_password: "新しいパスワードの確認"
+      change_my_password: "パスワードを変更する"
+    registrations:
+      destroyed: "またのご利用お待ちしております。"
+      signed_up: "Welcome! You have signed up successfully."
+      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
+      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
+      signed_up_but_unconfirmed: "登録されたメールアドレスに承認メールを送りました。メール内のURLをクリックして登録を完了させてください。"
+      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
+      updated: "Your account has been updated successfully."
+      updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again."
+      edit: "の編集"
+      sign_up: "アカウント登録"
+      update: "更新"
+      cancel_my_account: "アカウント削除"
+      unhappy: "気に入りません"
+    sessions:
+      signed_in: "ログインしました"
+      signed_out: "ログアウトしました"
+      already_signed_out: "ログアウトしました"
+      sign_in: "ログイン"
+    unlocks:
+      send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
+      send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
+      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+    supplement:
+      leave_blank_if_you_don't_want_to_change_it: "空欄のままなら変更しません"
+      characters_minimum: "文字以上"
+      we_need_your_current_password_to_confirm_your_changes: "変更を反映するには現在のパスワードを入力してください"
+      are_you_sure?: "本当にアカウントを削除しますか？"
+  errors:
+    messages:
+      already_confirmed: "はすでに確認されています。ログインしてみてください。"
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      not_locked: "was not locked"
+      not_saved:
+        one: "エラーが発生したためユーザーは保存されませんでした。"
+        other: "%{count}件のエラーが発生したためユーザーは保存されませんでした。"
+  links: 
+    log_in: "ログイン"
+    sign_up: "アカウント新規登録"
+    forgot_your_password: "パスワードを忘れましたか？"
+    didn't_receive_confirmation_instructions?: "アカウント確認のメールを受け取っていませんか？"
+    didn't_receive_unlock_instructions?: "アカウント確認のメールを受け取っていませんか？"
+    back: "戻る"

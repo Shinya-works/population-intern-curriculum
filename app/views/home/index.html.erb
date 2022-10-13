@@ -1,13 +1,15 @@
-<div class="container">
-  <div clas="row">
+<div class="max_width_25 text-center">
+  <h3>Dach Boards</h3>
+  <div class="row">
     <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
-      <%= link_to "ユーザー編集", edit_user_registration_path, class: "btn btn-secondary" %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-secondary" %> 
+      <h4><%= current_user.name %></h4>
+      <%= link_to "編集", edit_user_registration_path, class: "btn btn-primary" %>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-warning" %> 
     <% else %>
       <!-- ユーザーがログインしていなかった時の処理 -->
       <h2> 現在ログインしていません </h2>
-      <%= link_to "ログイン", new_user_session_path, class: 'post btn btn-secondary' %> 
-      <%= link_to "新規登録", new_user_registration_path, class: 'post btn btn-secondary' %> 
+      <%= link_to "ログイン", new_user_session_path, class: 'btn btn-success' %> 
+      <%= link_to "新規登録", new_user_registration_path, class: 'btn btn-primary' %> 
     <% end %>
   </div>
 </div>
