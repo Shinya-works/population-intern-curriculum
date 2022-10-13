@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     registrations: "users/registrations"
   }
   devise_scope :users do
-    namespace :users do
+    namespace :user, path: "users", module: "users" do
       resources :articles
     end
   end

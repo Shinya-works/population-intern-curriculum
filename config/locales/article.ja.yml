@@ -1,0 +1,29 @@
+ja:
+  index:
+    title: 記事一覧
+    t_head1: 詳細表示
+    t_head2: タイトル
+    t_head3: 内容
+    t_head4: 画像
+    t_head5: 編集・削除
+  new:
+    title: 記事の新規作成
+  edit:
+    title: 記事の編集
+  show:
+    title: 記事詳細
+    t_head1: タイトル
+    t_head2: 内容
+    t_head3: 画像
+  btn:
+    new_btn: 記事新規作成
+    show_btn: 詳細
+    edit_btn: 編集
+    destroy_btn: 削除
+    create_btn: 新規作成
+    update_btn: 更新する
+    back_index_btn: 記事一覧に戻る
+  link:
+    back: 戻る
+  confirm:
+    are_you_sure?: "%{article}を削除しますか？"

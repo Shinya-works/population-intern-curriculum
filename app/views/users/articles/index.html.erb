@@ -1,33 +1,36 @@
 <p id="notice"><%= notice %></p>
+<% provide(:ja_item, "index.") %>
+<% provide(:ja_btn, "btn.") %>
 
-<h1>Articles</h1>
+<div class="container text-center">
+  <h1><%= t("#{yield(:ja_item)}title") %></h1>
+  <%= link_to t("#{yield(:ja_btn)}new_btn"), new_user_article_path, class: "btn btn-primary width_50" %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Photo</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
+  <table class="table ">
+    <thead>
       <tr>
-        <td><%= article.title %></td>
-        <td><%= article.content %></td>
-        <td><%= article.photo %></td>
-        <td><%= article.user_id %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th><%= t("#{yield(:ja_item)}t_head1") %></th>
+        <th><%= t("#{yield(:ja_item)}t_head2") %></th>
+        <th><%= t("#{yield(:ja_item)}t_head3") %></th>
+        <th><%= t("#{yield(:ja_item)}t_head4") %></th>
+        <th><%= t("#{yield(:ja_item)}t_head5") %></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody class="table-group-divider">
+      <tr></tr>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= @article.title %></td>
+          <td><%= @article.content %></td>
+          <td><%= image_tag @article.user.photo.url, :size => "100x70" %></td>
+          <td><%= link_to t("#{yield(:ja_btn)}show_btn"), @article %></td>
+          <td><%= link_to t("#{yield(:ja_btn)}edit_btn"), @article %></td>
+          <td><%= link_to t("#{yield(:ja_btn)}destroy_btn"), @article, method: :delete, data: { confirm: t('confirm.are_you_sure?'), are_you_sure?: @article.title } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
-<%= link_to 'New Article', new_article_path %>
+

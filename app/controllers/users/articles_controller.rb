@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class Users::ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
 
   # GET /articles or /articles.json
@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
   # POST /articles or /articles.json
   def create
     @article = Article.new(article_params)
-
+byebug
     respond_to do |format|
       if @article.save
         format.html { redirect_to article_url(@article), notice: "Article was successfully created." }
