@@ -24,7 +24,7 @@
           <td><%= link_to t("#{yield(:ja_btn)}show_btn"), user_article_path(article), class: "btn btn-primary" %></td>
           <td><%= article.title %></td>
           <td><%= article.content %></td>
-          <td><%= image_tag article.photo.url, :size => "200x200" %></td>
+          <td><%= image_tag article.photo.url, :size => "200x200" if article.photo.present? %></td>
           <td>
             <%= link_to t("#{yield(:ja_btn)}edit_btn"), edit_user_article_path(article), class: "btn btn-success" %>
             <%= link_to t("#{yield(:ja_btn)}destroy_btn"), user_article_path(article), method: :delete, data: { confirm: t('confirm.are_you_sure?'), are_you_sure?: article.title }, class: "btn btn-danger" %>

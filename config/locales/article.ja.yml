@@ -27,3 +27,7 @@ ja:
     back: 戻る
   confirm:
     are_you_sure?: "%{article}を削除しますか？"
+  articles:
+    notice:
+      update: 記事を編集しました。
+      destroy: 記事を削除しました。

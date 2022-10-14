@@ -1,7 +1,10 @@
-<% provide(:ja_item, "#{ja_item}") %>
+<% provide(:item, "#{item}") %>
+<% provide(:btn, "#{item}") %>
 <div class="max_width_50">
-  <h1 class="text-center"><%= t("#{ja_item}.title") %></h1>
-  <%= form_with model: [user, article] do |form| %>
+
+  <h1 class="text-center"><%= t("#{item}.title") %></h1>
+
+  <%= form_with(model: article, url: url, local: true) do |form| %>
     <% if article.errors.any? %>
       <div id="error_explanation">
         <h2><%= t("errors.messages.not_saved.other", count: article.errors.count) %></h2>
@@ -30,7 +33,7 @@
     </div>
 
     <div class="actions text-center">
-      <%= form.submit t("btn.#{ja_item}_btn"), class: "btn btn-primary" %>
+      <%= form.submit t("btn.#{btn}_btn"), class: "btn btn-primary" %>
     </div>
   <% end %>
   <%= link_to t("link.back"), user_articles_path %>
