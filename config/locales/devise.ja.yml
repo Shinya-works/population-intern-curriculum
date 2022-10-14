@@ -86,8 +86,8 @@ ja:
       not_found: "not found"
       not_locked: "was not locked"
       not_saved:
-        one: "エラーが発生したためユーザーは保存されませんでした。"
-        other: "%{count}件のエラーが発生したためユーザーは保存されませんでした。"
+        one: "エラーが発生したため保存されませんでした。"
+        other: "%{count}件のエラーが発生したため保存されませんでした。"
   links: 
     log_in: "ログイン"
     sign_up: "アカウント新規登録"

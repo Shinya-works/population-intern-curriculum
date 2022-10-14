@@ -3,8 +3,9 @@
   <div class="row">
     <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
       <h4><%= current_user.name %></h4>
-      <%= link_to "編集", edit_user_registration_path, class: "btn btn-primary" %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-warning" %> 
+      <div class="btn_padding_t_b"><%= link_to "記事一覧", user_articles_path, class: "btn btn-primary width_100" %></div>
+      <div class="btn_padding_t_b"><%= link_to "編集", edit_user_registration_path, class: "btn btn-primary width_100" %></div>
+      <div class="btn_padding_t_b"><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-warning width_100" %> </div>
     <% else %>
       <!-- ユーザーがログインしていなかった時の処理 -->
       <h2> 現在ログインしていません </h2>

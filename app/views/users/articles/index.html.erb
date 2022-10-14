@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<% provide(:ja_item, "index.") %>
+<% provide(:ja_btn, "btn.") %>
+
+<div class="container text-center">
+  <h1><%= t("#{yield(:ja_item)}title") %></h1>
+  <%= link_to t("#{yield(:ja_btn)}new_btn"), new_user_article_path, class: "btn btn-primary width_50" %>
+
+  <table class="table align-middle table-sm">
+    <thead>
+      <tr>
+        <th><%= t("#{yield(:ja_item)}t_head1") %></th>
+        <th><%= t("#{yield(:ja_item)}t_head2") %></th>
+        <th><%= t("#{yield(:ja_item)}t_head3") %></th>
+        <th><%= t("#{yield(:ja_item)}t_head4") %></th>
+        <th><%= t("#{yield(:ja_item)}t_head5") %></th>
+      </tr>
+    </thead>
+
+    <tbody class="table-group-divider">
+      <tr></tr>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= link_to t("#{yield(:ja_btn)}show_btn"), user_article_path(article), class: "btn btn-primary" %></td>
+          <td><%= article.title %></td>
+          <td><%= article.content %></td>
+          <td><%= image_tag article.photo.url, :size => "200x200" if article.photo.present? %></td>
+          <td>
+            <%= link_to t("#{yield(:ja_btn)}edit_btn"), edit_user_article_path(article), class: "btn btn-success" %>
+            <%= link_to t("#{yield(:ja_btn)}destroy_btn"), user_article_path(article), method: :delete, data: { confirm: t('confirm.are_you_sure?'), are_you_sure?: article.title }, class: "btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+
